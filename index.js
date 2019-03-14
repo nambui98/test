@@ -20,21 +20,5 @@ log(chalk.green(
     ' that becomes green again!'
 ));
 
+log(chalk.red('nam bui'));
 // ES2015 template literal
-log(`
-CPU: ${chalk.red('90%')}
-RAM: ${chalk.green('40%')}
-DISK: ${chalk.yellow('70%')}
-`);
-
-// ES2015 tagged template literal
-log(chalk`
-CPU: {red ${cpu.totalPercent}%}
-RAM: {green ${ram.used / ram.total * 100}%}
-DISK: {rgb(255,131,0) ${disk.used / disk.total * 100}%}
-`);
-
-// Use RGB colors in terminal emulators that support it.
-log(chalk.keyword('orange')('Yay for orange colored text!'));
-log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
-log(chalk.hex('#DEADED').bold('Bold gray!'));
